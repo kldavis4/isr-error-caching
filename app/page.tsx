@@ -13,9 +13,9 @@ export default function Home() {
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold mb-2">Always Error Page</h2>
+          <h2 className="text-xl font-semibold mb-2">Always Error Page (JSON)</h2>
           <p className="mb-4">
-            This page always returns a 500 status with an error message, with 15-second revalidation.
+            This page always returns a 500 status with a JSON error message, with 15-second revalidation.
           </p>
           <a
             href="/always-error/demo"
@@ -36,6 +36,62 @@ export default function Home() {
           >
             View Page
           </a>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-2">Custom Status Code (JSON)</h2>
+          <p className="mb-4">This page returns any status code you specify in the URL with a JSON response.</p>
+          <div className="flex flex-wrap gap-2 mt-3">
+            <a
+              href="/status-code/200"
+              className="inline-block bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600"
+            >
+              200 OK
+            </a>
+            <a
+              href="/status-code/400"
+              className="inline-block bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600"
+            >
+              400 Bad Request
+            </a>
+            <a
+              href="/status-code/404"
+              className="inline-block bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600"
+            >
+              404 Not Found
+            </a>
+            <a
+              href="/status-code/500"
+              className="inline-block bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600"
+            >
+              500 Server Error
+            </a>
+          </div>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-2">Custom HTML Error Pages</h2>
+          <p className="mb-4">This page returns any status code you specify with a custom HTML error page.</p>
+          <div className="flex flex-wrap gap-2 mt-3">
+            <a
+              href="/html-error/400"
+              className="inline-block bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600"
+            >
+              400 Bad Request
+            </a>
+            <a
+              href="/html-error/404"
+              className="inline-block bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600"
+            >
+              404 Not Found
+            </a>
+            <a
+              href="/html-error/500"
+              className="inline-block bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600"
+            >
+              500 Server Error
+            </a>
+          </div>
         </div>
       </div>
 
